@@ -72,7 +72,7 @@ def main():
                     # Model building
                     print("Building model and compiling functions...")
                     network = build_cnn(input_var,num_bands,k_1,k_2,k_3)#k_4 
-                    with np.load('/home2/mass.gargiulo/Albufera/Output_W/Models/'+file) as g:
+                    with np.load(model_folder+file) as g:
                         param_values = [g['arr_%d' % i] for i in range(len(g.files))]
                     lasagne.layers.set_all_param_values(network, param_values)
 
