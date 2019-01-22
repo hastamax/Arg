@@ -38,9 +38,13 @@ Firstly, you have to download the dataset from [LINK](http://www.unina.it/) . If
 The proposed techniques to extract water information are the model in the directory Models:  fa33 (for additional information about the technique we could contact Massimiliano Gargiulo).
 
 
-You have to use the `SAR2Water.py` code to train the CNN  and `TestWater.py` `Funz_Water.py` to test the models that you can already find in the Models folder or the models that you will create.
+You have to use the `SAR2WaterMonitoring.py` code to train the CNN  and `TestWater.py` `Funz_Water.py` to test the models that you can already find in the Models folder or the models that you will create.
 
-To start the training or the test you have to write the following string in the command line: 
+To start the training you have to write the following string in the command line
+
+python SAR2WaterMask.py --model_folder /home2/mass.gargiulo/Albufera/ --model_name ffff --data_folder /home2/mass.gargiulo/Albufera/Dataset2/ --rate 0.005 --num_epochs 25 --patch_size 17 --filter_size_I 3 --filter_size_II 3 --filter_size_III 3
+
+or for the test : 
 
 python TestWater.py --model_folder /Albufera/Models/ --model_name fa33 --data_folder --output_folder /Albufera/Output/ --thresholding 0
 
